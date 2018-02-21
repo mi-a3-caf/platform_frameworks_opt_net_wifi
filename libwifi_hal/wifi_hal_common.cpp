@@ -113,7 +113,7 @@ int wifi_change_driver_state(const char *state) {
 
   if (!state) return -1;
   do {
-    if (access(WIFI_DRIVER_STATE_CTRL_PARAM, R_OK|W_OK) == 0)
+    if (access(WIFI_DRIVER_STATE_CTRL_PARAM, W_OK) == 0)
       break;
     nanosleep(&req, (struct timespec *)NULL);
   } while (--count > 0);
