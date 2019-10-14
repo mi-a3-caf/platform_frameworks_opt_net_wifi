@@ -255,7 +255,6 @@ int wifi_load_driver() {
 #endif
   is_driver_loaded = true;
   return 0;
-}
 
 #ifdef WIFI_DRIVER_OPERSTATE_PATH
   if (!is_wifi_driver_ready()) {
@@ -263,6 +262,7 @@ int wifi_load_driver() {
     return -1;
   }
 #endif
+}
 
 int wifi_unload_driver() {
   if (!is_wifi_driver_loaded()) {
